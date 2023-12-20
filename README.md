@@ -51,13 +51,44 @@ If you run ``cluster_dists``, you should see the following usage statement:
  
 
 
+Supported input distance formats
+=====
+**Matrix**
+
+|  id  |  S1  |  S2  |  S3  |  S4 |  S5 |  S6  | 
+| ----------- | ----------- |----------- | ----------- | ----------- |----------- | ----------- | 
+|  S1  |	0  |  0  |  3  |  3  |  9  |  9  |
+|  S2  |	0  |  0  |  3  |  3  |  9  |  9  | 
+|  S3  |	3  |  3  |  0  |  0  |  9  |  9  | 
+|  S4  |	3  |  3  |  0  |  0  |  9  |  9  | 
+|  S5  |	9  |  9  |  9  |  9  |  0  |  0  | 
+|  S6  |	9  |  9 |  9  |  9  |  0  |  0 |  
+
+<br>
+
+**Pairwise**
+
+|  query_id  |  ref_id  |  dist  | 
+| ----------- | ----------- |----------- | 
+|  S1  |	S1  |  0  | 
+|  S1  |	S2  |  0  | 
+|  S1  |	S3  |  3  | 
+|  S1  |	S3  |  3  | 
+|  S1  |	S5  |  9  |  
+|  S1  |	S6  |  9 |  
+
+
+
+
+
+
 ## FAQ
 
 Coming soon
 
 ## Citation
 
-Robertson, James, Wells, Matthew, Schonfeld, Justin, Reimer, Aleisha. Cluster Dists: Summarizing pairwise distances within categorical groupings. 2023. https://github.com/phac-nml/cluster_dists
+Robertson, James, Wells, Matthew, Kyrylo, Bessonov, Schonfeld, Justin, Reimer, Aleisha. Cluster Dists: Summarizing pairwise distances within categorical groupings. 2023. https://github.com/phac-nml/cluster_dists
 
 ## Legal
 
