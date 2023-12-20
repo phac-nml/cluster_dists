@@ -40,7 +40,7 @@ def parse_args():
         formatter_class=CustomFormatter)
     parser.add_argument('-d', '--dists', type=str, required=True,
                         help='Three column file [query_id,ref_id,dist] or square distance matrix')
-    parser.add_argument('-f', '--format', type=str, required=True,
+    parser.add_argument('-b', '--format', type=str, required=True,
                         help='"pairwise" or "matrix" format')
     parser.add_argument('-m', '--metadata', type=str, required=True,
                         help='Metadata file which contains labels for aggregation')
@@ -125,3 +125,6 @@ def main():
     sys.stdout.flush()
 
 
+# call main function
+if __name__ == '__main__':
+    main()
