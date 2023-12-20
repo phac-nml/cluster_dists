@@ -45,41 +45,11 @@ Install the latest master branch version directly from Github:
 ## Usage
 If you run ``cluster_dists``, you should see the following usage statement:
 
-    
+    usage: main.py [-h] -d DISTS -b FORMAT -m METADATA --outdir OUTDIR
+               [--outlier_threshold OUTLIER_THRESHOLD] --sample_column
+               SAMPLE_COLUMN --label_column LABEL_COLUMN [--force] [-V]
+ 
 
-
-Quick start
-=====
-**Distance matrix calculation**
-
-The default behaviour of profile dists is to construct a pairwise distance matrix with the columns representing the
-reference sequences and rows representing the query sequences. For clustering analysis, you can construct a symmertic/square
-distance matrix by supplying the same profile as reference and query.
-
-<br />
-
-        profile_dists --query samples.profile --ref samples.profile --outdir results
-
-Profile dists also suports querying of a set of sample profiles against a reference database and reporting that as either a
-matrix or three column table of [ query_id, reference_id, dist ]
-
-<br />
-
-        profile_dists --query queries.profile --ref reference.profile --outdir results --match_threshold 10
-
-**Outputs:**
-
-```
-{Output folder name}
-├── allele_map.json - Mapping of allele hash string to integer id, can be use for reruning of analyses or masking specific alleles
-├── query_profile.{text|parquet}  - Standardized allele profile for query sequences
-├── ref_profile.{text|parquet}  - Standardized allele profile for reference sequences
-├── results.{text|parquet} - Either symmetric distance matrix or three column file of [query_id, ref_if, distance]
-└── run.json - Contains logging information for the run including parameters and quality information
-```
-## Benchmarks
-
-Coming soon
 
 ## FAQ
 
